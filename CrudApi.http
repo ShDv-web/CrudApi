@@ -1,0 +1,25 @@
+@CrudApi_HostAddress = http://localhost:5045
+@ApiToken = dev-secret-token
+
+GET {{CrudApi_HostAddress}}/GetAllUsers
+Accept: application/json
+Authorization: Bearer {{ApiToken}}
+
+###
+
+GET {{CrudApi_HostAddress}}/GetUserById/1
+Accept: application/json
+Authorization: Bearer {{ApiToken}}
+
+###
+
+POST {{CrudApi_HostAddress}}/CreateUser
+Content-Type: application/json
+Authorization: Bearer {{ApiToken}}
+
+{
+  "id": 4,
+  "name": "Alice Cooper"
+}
+
+###
